@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'circe';
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1250px;
+            margin: 0px auto;
+        }
+        .promocode-cart--header {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .promocode-cart--wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+        .promocode-cart--item {
+            display: flex;
+            align-items: center;
+        }
+        .promocode-cart--item--text {
+            display: flex;
+            flex-direction: column;
+            flex: 0 1 75%;
+            padding: 10px 20px;
+            font-size: 14px;
+            position: relative;
+            min-height: 100%;
+            background: rgb(164, 189, 255);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s all ease-in-out;
+        }
+        .promocode-cart--item--img {
+            flex: 0 1 25%;
+            margin-left: 2px;
+            min-height: 100%;
+            position: relative;
+            background: rgb(164, 189, 255);
+            border-radius: 10px;
+            transition: 0.3s all ease-in-out;
+            overflow: hidden;
+        }
+        .coupon-active {
+            transform: translateX(6px) translateY(4px) rotateZ(5deg);
+        }
+        .coupon-text-active {
+            background: #f8f8f8;
+        }
+        .promocode-cart--item--img .line,
+        .promocode-cart--item--text .line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            position: absolute;
+            min-height: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px 0px;
+        }
+        .promocode-cart--item--img .line {
+            left: -5px;
+        }
+        .promocode-cart--item--text .line {
+            right: -5px;
+        }
+        .line span{
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+        }
+        .promocode-cart--item--text span.time {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 12px;
+        }
+        .promocode-cart--item--text span.bold {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .promocode-cart--item--text span.small {
+           font-size: 14px;
+           margin-bottom: 5px;
+        }
+        .promocode-cart--item--text input {
+            border: none;
+            border-radius: 10px;
+            padding: 2px 10px;
+            outline: none;
+            max-width: 100%;
+        }
+        .promo {
+            position: relative;
+        }
+        .promo button.copy {
+            border: none;
+            background: transparent;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+        @media (max-width: 728px) {
+            .container {
+                max-width: none;
+                padding: 0px 10px;
+            }
+            .promocode-cart--wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <div class="container">
+        <div class="promocode-cart">
+            <h3 class="promocode-cart--header">Доступные промокоды и купоны</h3>
+            <div class="promocode-cart--wrapper">
+                <div class="promocode-cart--item">
+                    <div class="promocode-cart--item--text">
+                        <span class="bold">6 по цене 5</span>
+                        <span class="small">На товары из категории Colgate по промокоду </span>
+                        <div class="promo">
+                            <input type="text" value="Colgate22">
+                            <button class="copy">Copy</button>
+                        </div>
+                        <span class="time">до 07.12</span>
+                        <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="promocode-cart--item--img">
+                        <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    </div>
+                </div>
+                <div class="promocode-cart--item">
+                    <div class="promocode-cart--item--text">
+                        <span class="bold">6 по цене 5</span>
+                        <span class="small">На товары из категории Colgate по промокоду </span>
+                        <div class="promo">
+                            <input type="text" value="тест2">
+                            <button class="copy">Copy</button>
+                        </div>
+                        <span class="time">до 07.12</span>
+                        <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="promocode-cart--item--img">
+                        <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    </div>
+                </div>
+                <div class="promocode-cart--item">
+                    <div class="promocode-cart--item--text">
+                        <span class="bold">6 по цене 5</span>
+                        <span class="small">На товары из категории Colgate по промокоду </span>
+                        <div class="promo">
+                            <input type="text" value="тест3">
+                            <button class="copy">Copy</button>
+                        </div>
+                        <span class="time">до 07.12</span>
+                        <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="promocode-cart--item--img">
+                        <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    </div>
+                </div>
+                <div class="promocode-cart--item">
+                    <div class="promocode-cart--item--text">
+                        <span class="bold">6 по цене 5</span>
+                        <span class="small">На товары из категории Colgate по промокоду </span>
+                        <div class="promo">
+                            <input type="text" value="тест4">
+                            <button class="copy">Copy</button>
+                        </div>
+                        <span class="time">до 07.12</span>
+                        <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="promocode-cart--item--img">
+                        <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    </div>
+                </div>
+                <div class="promocode-cart--item">
+                    <div class="promocode-cart--item--text">
+                        <span class="bold">6 по цене 5</span>
+                        <span class="small">На товары из категории Colgate по промокоду </span>
+                        <div class="promo">
+                            <input type="text" value="тест5">
+                            <button class="copy">Copy</button>
+                        </div>
+                        <span class="time">до 07.12</span>
+                        <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="promocode-cart--item--img">
+                        <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const promo = document.querySelectorAll('.promo');
+        const promoImage = document.querySelectorAll('.promocode-cart--item--img')
+        const promoText = document.querySelectorAll('.promocode-cart--item--text')
+        const promocode = document.querySelectorAll('.promo > input');
+        const promocopy = document.querySelectorAll('.promo > .copy');
+        
+        promo.forEach(function(promoItem, index) {
+            promocopy[index].addEventListener('click', (event) => {
+                navigator.clipboard.writeText(promocode[index].value);
+                promoImage[index].classList.add('coupon-active');
+                promoText[index].classList.add('coupon-text-active');
+            })
+        })
+    </script>
+
+</body>
+</html>
